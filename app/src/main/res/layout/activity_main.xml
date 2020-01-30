@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/cover_img"
+        android:src="@drawable/coverpic"
+        android:background="@drawable/coverpic"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:src="@drawable/profilepic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/profile_image"
+        app:tabBackground="@drawable/tab_background"
+        app:tabGravity="fill"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabTextColor="#FFFFFF"
+        android:id="@+id/tab_layout_id"
+
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tab_layout_id"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager_id"
+        />
+
+
+
+</RelativeLayout>
